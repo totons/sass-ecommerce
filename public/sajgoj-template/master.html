@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#FF3366">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>YOUR_SITE_TITLE - Beauty & Personal Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>.logo img { max-height: 40px; width: auto; display: block; }</style>
+    <!-- Add your page-specific CSS here -->
+</head>
+<body>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <span class="mobile-nav-close" id="mobileNavClose">✕</span>
+        </div>
+        <div class="mobile-nav-links">
+            <h4 class="mobile-nav-title">ক্যাটাগরি</h4>
+            <!-- Loop: Categories -->
+            <a href="#">Makeup</a>
+            <a href="#">Skin</a>
+            <a href="#">Hair</a>
+            <a href="#">Personal care</a>
+            <a href="#">Mom & Baby</a>
+            <a href="#">Fragrance</a>
+            <h4 class="mobile-nav-title">অফার</h4>
+            <a href="#">UNDERGARMENTS</a>
+            <a href="#">EID GIGA SALE</a>
+            <a href="#">BRANDS</a>
+        </div>
+    </nav>
+
+    <!-- ==================== TOP HEADER ==================== -->
+    <header class="top-header">
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="logo-brand-group">
+                <a href="/" class="logo"><img src="images/logo.png" alt="SHAJGOJ"></a>
+                <a href="/brands" class="brands-link">BRANDS</a>
+            </div>
+            <div class="search-section">
+                <form action="/search" method="get" class="search-bar">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="text" placeholder="Grab Himalaya upto 50%" name="q" />
+                </form>
+            </div>
+            <div class="action-buttons">
+                <a href="/wishlist" class="btn-wishlist">WISHLIST</a>
+                <a href="/login" class="btn-login">LOGIN</a>
+                <a href="/cart" class="btn-bag">
+                    <svg class="bag-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="bag-text">BAG</span>
+                    <span class="bag-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN NAVIGATION ==================== -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#">Makeup</a>
+                <a href="#">Skin</a>
+                <a href="#">Hair</a>
+                <a href="#">Personal care</a>
+                <a href="#">Mom & Baby</a>
+                <a href="#">Fragrance</a>
+            </div>
+            <div class="nav-pills">
+                <a href="#" class="pill pill-blue">UNDERGARMENTS</a>
+                <a href="#" class="pill pill-pink">EID GIGA SALE</a>
+                <a href="#" class="pill pill-purple">JEWELLERY</a>
+                <a href="#" class="pill pill-teal">CLEARANCE SALE</a>
+                <a href="#" class="pill pill-green">MEN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <!-- Laravel: @yield('content') -->
+    <main id="main-content">
+        <!-- Your page content goes here. See index.html for home page example. -->
+    </main>
+
+    <!-- ==================== FLOATING CART ==================== -->
+    <a href="/cart" class="floating-cart">
+        <div class="cart-top">
+            <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>0 ITEMS</span>
+        </div>
+        <div class="cart-bottom">৳ ০</div>
+    </a>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-feature">
+                <div class="feature-icon">✓</div>
+                <div class="feature-text">
+                    <span class="feature-num">100%</span>
+                    <span class="feature-label">AUTHENTIC PRODUCTS</span>
+                </div>
+            </div>
+            <div class="footer-feature">
+                <div class="feature-icon">🧴</div>
+                <div class="feature-text">
+                    <span class="feature-num">15000+</span>
+                    <span class="feature-label">BEAUTY PRODUCTS</span>
+                </div>
+            </div>
+            <div class="footer-feature">
+                <div class="feature-icon">★</div>
+                <div class="feature-text">
+                    <span class="feature-num">400+</span>
+                    <span class="feature-label">EXCLUSIVE BRANDS</span>
+                </div>
+            </div>
+            <div class="footer-feature">
+                <div class="feature-icon">🎧</div>
+                <div class="feature-text">
+                    <span class="feature-num">FREE</span>
+                    <span class="feature-label">BEAUTY CONSULTATION</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-column col-1">
+                <a href="/" class="footer-logo">SHAJGOJ</a>
+                <a href="#">OUR STORY</a>
+                <a href="#">SHOOZE MAGAZINE</a>
+                <a href="#">AUTHENTICITY</a>
+                <hr>
+                <h4>SHARE YOUR LOVE</h4>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                    <a href="#">p</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>TOP CATEGORIES</h4>
+                <a href="#">MAKEUP</a>
+                <a href="#">SKIN</a>
+                <a href="#">HAIR</a>
+                <a href="#">PERSONAL CARE</a>
+                <a href="#">MOM & BABY</a>
+            </div>
+            <div class="footer-column">
+                <h4>QUICK LINKS</h4>
+                <a href="#">OFFERS</a>
+                <a href="#">NEW PRODUCTS</a>
+                <a href="#">NEW ARRIVAL</a>
+            </div>
+            <div class="footer-column">
+                <h4>HELP</h4>
+                <a href="#">CONTACT US</a>
+                <a href="#">FAQS</a>
+                <a href="#">SHIPPING & DELIVERY</a>
+                <a href="#">TRACK ORDER</a>
+                <a href="#">PRIVACY POLICY</a>
+                <hr>
+                <h4>WE ARE ACCEPTING</h4>
+                <div class="payment-icons">Visa | MC | Amex</div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">TERMS & CONDITIONS</a>
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">REFUND POLICY</a>
+                <a href="#">FAQS</a>
+            </div>
+            <p class="copyright">Copyright © 2026 Your Site. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING CHAT ==================== -->
+    <a href="#" class="floating-chat-btn" aria-label="Chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Mobile Menu Toggle
+        (function(){
+            var menuBtn = document.getElementById('mobileMenuBtn');
+            var menuDrawer = document.getElementById('mobileNavDrawer');
+            var menuOverlay = document.getElementById('mobileMenuOverlay');
+            var menuClose = document.getElementById('mobileNavClose');
+
+            function openMenu() {
+                if (menuDrawer) menuDrawer.classList.add('open');
+                if (menuOverlay) menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                if (menuDrawer) menuDrawer.classList.remove('open');
+                if (menuOverlay) menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (menuClose) menuClose.addEventListener('click', closeMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+            document.querySelectorAll('.mobile-nav-links a').forEach(function(link) {
+                link.addEventListener('click', closeMenu);
+            });
+        })();
+
+        // Add your page-specific scripts here
+    </script>
+</body>
+</html>
