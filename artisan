@@ -19,6 +19,13 @@ require __DIR__.'/vendor/autoload.php';
 
 $app = require_once __DIR__.'/bootstrap/app.php';
 
+// The views in this project intentionally generate assets as /public/....
+// Use the project directory as the document root only for `artisan serve`,
+// matching the production layout without changing public_path() elsewhere.
+if (($argv[1] ?? null) === 'serve') {
+    $app->usePublicPath(__DIR__);
+}
+
 /*
 |--------------------------------------------------------------------------
 | Run The Artisan Application

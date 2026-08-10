@@ -23,12 +23,96 @@
     <link href="<?php echo e(asset('public/backEnd/')); ?>/assets/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- Head js -->
     <?php echo $__env->yieldContent('css'); ?>
-    <style>.navbar-custom .dropdown-menu .noti-scroll{max-height:230px!important;overflow-y:auto!important}</style>
+    <style>
+      .navbar-custom .dropdown-menu .noti-scroll{max-height:230px!important;overflow-y:auto!important}
+      .admin-theme-toggle{border:0;background:transparent;color:inherit;min-width:44px;cursor:pointer}
+      .admin-theme-toggle:focus-visible{outline:2px solid #fff;outline-offset:-5px;border-radius:50%}
+      [data-theme="dark"] .admin-theme-toggle{color:#f8d568}
+      [data-theme="dark"] .content-page,[data-theme="dark"] .footer{background-color:#171b24}
+      [data-theme="dark"] .card,[data-theme="dark"] .modal-content,[data-theme="dark"] .dropdown-menu{background-color:#222733;color:#e7eaf0}
+      [data-theme="dark"] .table{color:#dce1e9}
+      [data-theme="dark"] .table-light{--bs-table-bg:#2b313f;--bs-table-color:#e7eaf0}
+      [data-theme="dark"] .text-dark{color:#e7eaf0!important}
+      [data-theme="dark"] .border-bottom,[data-theme="dark"] .border-top{border-color:#343b49!important}
+      [data-theme="dark"]{color-scheme:dark}
+      [data-theme="dark"],
+      [data-theme="dark"] #wrapper,
+      [data-theme="dark"] .content-page,
+      [data-theme="dark"] .content,
+      [data-theme="dark"] .container-fluid{background-color:#171b24;color:#e7eaf0}
+      [data-theme="dark"] .navbar-custom{background:#202531!important;border-color:#343b49!important}
+      [data-theme="dark"] .navbar-custom .nav-link,
+      [data-theme="dark"] .navbar-custom .pro-user-name{color:#e7eaf0!important}
+      [data-theme="dark"] .left-side-menu,
+      [data-theme="dark"] .logo-box{background:#1d222d!important;border-color:#343b49!important}
+      [data-theme="dark"] #sidebar-menu>ul>li>a,
+      [data-theme="dark"] #sidebar-menu .nav-second-level li a,
+      [data-theme="dark"] #sidebar-menu .menu-title,
+      [data-theme="dark"] .user-box .dropdown-toggle{color:#cdd3dd!important}
+      [data-theme="dark"] #sidebar-menu>ul>li>a:hover,
+      [data-theme="dark"] #sidebar-menu>ul>li>a:focus,
+      [data-theme="dark"] #sidebar-menu>ul>li>a.active,
+      [data-theme="dark"] #sidebar-menu .nav-second-level li a:hover,
+      [data-theme="dark"] #sidebar-menu .nav-second-level li a.active{color:#fff!important;background:#292f3d!important}
+      [data-theme="dark"] .card,
+      [data-theme="dark"] .card-body,
+      [data-theme="dark"] .card-header,
+      [data-theme="dark"] .card-footer,
+      [data-theme="dark"] .widget-rounded-circle,
+      [data-theme="dark"] .page-title-box,
+      [data-theme="dark"] .tab-content,
+      [data-theme="dark"] .accordion-item,
+      [data-theme="dark"] .list-group-item{background-color:#222733!important;color:#e7eaf0;border-color:#343b49!important}
+      [data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,
+      [data-theme="dark"] h4,[data-theme="dark"] h5,[data-theme="dark"] h6,
+      [data-theme="dark"] label,[data-theme="dark"] .form-label{color:#edf0f5}
+      [data-theme="dark"] .text-muted{color:#9fa8b8!important}
+      [data-theme="dark"] .bg-white,[data-theme="dark"] .bg-light{background-color:#2b313f!important;color:#e7eaf0!important}
+      [data-theme="dark"] .form-control,
+      [data-theme="dark"] .form-select,
+      [data-theme="dark"] .input-group-text,
+      [data-theme="dark"] .select2-container .select2-selection--single,
+      [data-theme="dark"] .select2-container .select2-selection--multiple,
+      [data-theme="dark"] .select2-dropdown,
+      [data-theme="dark"] .chosen-container .chosen-single,
+      [data-theme="dark"] .chosen-container .chosen-drop{background:#1b202a!important;color:#e7eaf0!important;border-color:#414959!important}
+      [data-theme="dark"] .form-control:focus,[data-theme="dark"] .form-select:focus{background:#1b202a;color:#fff;border-color:#6658dd;box-shadow:0 0 0 .15rem rgba(102,88,221,.2)}
+      [data-theme="dark"] .form-control::placeholder{color:#7f899a}
+      [data-theme="dark"] .dropdown-item{color:#dce1e9}
+      [data-theme="dark"] .dropdown-item:hover,[data-theme="dark"] .dropdown-item:focus{background:#303746;color:#fff}
+      [data-theme="dark"] .modal-header,[data-theme="dark"] .modal-footer{border-color:#343b49}
+      [data-theme="dark"] .btn-close{filter:invert(1) grayscale(100%) brightness(180%)}
+      [data-theme="dark"] .table>:not(caption)>*>*{background-color:transparent;color:inherit;border-color:#343b49}
+      [data-theme="dark"] .table-hover>tbody>tr:hover>*{background-color:#292f3d;color:#fff}
+      [data-theme="dark"] .dataTables_wrapper .dataTables_info,
+      [data-theme="dark"] .dataTables_wrapper .dataTables_length,
+      [data-theme="dark"] .dataTables_wrapper .dataTables_filter{color:#cdd3dd!important}
+      [data-theme="dark"] .page-link{background:#222733;color:#b8c0cc;border-color:#3b4352}
+      [data-theme="dark"] .page-item.active .page-link{background:#6658dd;color:#fff;border-color:#6658dd}
+      [data-theme="dark"] .page-item.disabled .page-link{background:#1b202a;color:#697386;border-color:#343b49}
+      [data-theme="dark"] .alert-light{background:#2b313f;color:#dce1e9;border-color:#414959}
+      [data-theme="dark"] hr{border-color:#414959;opacity:.75}
+      [data-theme="dark"] .footer{background:#1d222d!important;color:#9fa8b8!important;border-color:#343b49!important}
+      [data-theme="dark"] .right-bar{background:#222733;color:#e7eaf0}
+      [data-theme="dark"] .apexcharts-canvas text{fill:#cdd3dd!important}
+      [data-theme="dark"] .apexcharts-legend-text{color:#cdd3dd!important}
+      [data-theme="dark"] .apexcharts-tooltip,[data-theme="dark"] .apexcharts-xaxistooltip{background:#222733!important;color:#e7eaf0!important;border-color:#414959!important}
+    </style>
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem('admin-theme');
+        var preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-admin-theme', savedTheme || preferredTheme);
+      })();
+    </script>
     <script src="<?php echo e(asset('public/backEnd/')); ?>/assets/js/head.js"></script>
   </head>
 
   <!-- body start -->
   <body data-layout-mode="default" data-theme="light" data-layout-width="fluid" data-topbar-color="dark" data-menu-position="fixed" data-leftbar-color="light" data-leftbar-size="default" data-sidebar-user="false">
+    <script>
+      document.body.setAttribute('data-theme', document.documentElement.getAttribute('data-admin-theme') || 'light');
+    </script>
     <!-- Begin page -->
     <div id="wrapper">
       <!-- Topbar Start -->
@@ -50,6 +134,12 @@
               <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
                 <i class="fe-maximize noti-icon"></i>
               </a>
+            </li>
+
+            <li class="dropdown d-inline-block">
+              <button type="button" class="nav-link admin-theme-toggle waves-effect waves-light" id="admin-theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+                <i class="fe-moon noti-icon" id="admin-theme-icon" aria-hidden="true"></i>
+              </button>
             </li>
 
             <?php if(isset($demoMode) && $demoMode): ?>
@@ -1173,6 +1263,40 @@
 
     <!-- App js -->
     <script src="<?php echo e(asset('public/backEnd/')); ?>/assets/js/app.min.js"></script>
+    <script>
+      (function () {
+        var storageKey = 'admin-theme';
+        var button = document.getElementById('admin-theme-toggle');
+        var icon = document.getElementById('admin-theme-icon');
+
+        function applyTheme(theme) {
+          var isDark = theme === 'dark';
+          document.documentElement.setAttribute('data-admin-theme', theme);
+          document.body.setAttribute('data-theme', theme);
+          document.body.setAttribute('data-leftbar-color', isDark ? 'dark' : 'light');
+          document.body.setAttribute('data-topbar-color', 'dark');
+
+          if (icon) icon.className = (isDark ? 'fe-sun' : 'fe-moon') + ' noti-icon';
+          if (button) {
+            var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+            button.setAttribute('aria-label', label);
+            button.setAttribute('title', label);
+          }
+
+          window.dispatchEvent(new CustomEvent('adminThemeChanged', { detail: { theme: theme } }));
+        }
+
+        applyTheme(document.documentElement.getAttribute('data-admin-theme') || 'light');
+
+        if (button) {
+          button.addEventListener('click', function () {
+            var nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem(storageKey, nextTheme);
+            applyTheme(nextTheme);
+          });
+        }
+      })();
+    </script>
     <!-- Feather Icons - Ensure library is loaded and initialized -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>

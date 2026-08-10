@@ -21,6 +21,21 @@
   box-shadow:0 2px 10px rgba(0,0,0,.06)
 }
 .table td,.table th{vertical-align:middle}
+[data-theme="dark"] .dashboard-card,
+[data-theme="dark"] .chart-box{
+  background:#222733;color:#e7eaf0;
+  box-shadow:0 2px 14px rgba(0,0,0,.24)
+}
+[data-theme="dark"] .metric-title{color:#9fa8b8}
+[data-theme="dark"] .metric-value{color:#f3f5f8}
+[data-theme="dark"] .chart-box .table{color:#dce1e9}
+[data-theme="dark"] .chart-box .table-light{--bs-table-bg:#2b313f;--bs-table-color:#e7eaf0}
+[data-theme="dark"] .chart-box .border-bottom{border-color:#343b49!important}
+[data-theme="dark"] .apexcharts-text{fill:#cdd3dd!important}
+[data-theme="dark"] .apexcharts-gridline{stroke:#343b49}
+[data-theme="dark"] .apexcharts-tooltip,[data-theme="dark"] .apexcharts-xaxistooltip{
+  background:#222733!important;color:#e7eaf0!important;border-color:#3b4352!important
+}
 </style>
 @endsection
 
